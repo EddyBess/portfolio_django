@@ -17,5 +17,10 @@
         Made on the : {{project.date}}
     </p>
     <a href="{{project.url}}">See Source Code</a>
+    <p>
+        {% for skill in project_skills %}
+            {{skill.name}}
+        {% endfor %}    
+    </p>
 </body>
 </html>

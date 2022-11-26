@@ -1,3 +1,4 @@
+{% load static  %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <link rel="stylesheet" href="{% static 'projects.css' %}">
 </head>
 <body>
-    {% for project in latest_projects %}
-    <h1>
-        <a href="/projects/{{project.id}}">{{project.name}}</a>
-    </h1>
-    <p>
-        {{project.date}}
-    </p>
-    {% endfor %}
+    <div class="projects">    
+        {% for project in latest_projects %}
+        <section>
+            <h1>
+                <a href="/projects/{{project.id}}">{{project.name}}</a>
+            </h1>
+            <p>
+                {{project.date}}
+            </p>
+            
+        </section>
+       
+        {% endfor %}
+
+    </div>
      
     
 </body>
