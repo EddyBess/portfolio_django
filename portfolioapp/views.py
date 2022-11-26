@@ -22,3 +22,9 @@ def details(request, project_id):
     project_skills = project.skills.all()
     project_images = project.imgs.all()
     return render(request, "portoflioapp/details.html", {"project": project,"project_skills":project_skills,"project_images":project_images})
+    
+def about(request):
+    return HttpResponse("This my About Page , WIP")
+
+def contact(request):
+    return HttpResponse("This is my Contact Page , WIP")
