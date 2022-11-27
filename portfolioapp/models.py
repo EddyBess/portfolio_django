@@ -38,3 +38,11 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_thumbnail_img(self):
+        return self.imgs.all()[0]
+
+    def get_all_imgs(self):
+        return self.imgs.all()
+    def get_all_skills(self):
+        return self.skills.all()

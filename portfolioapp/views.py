@@ -9,8 +9,12 @@ from .models import Project
 def projects(request):
 
     latest_projects = Project.objects.order_by("-date")
+    project_images = []
+    for project in latest_projects:
+        project_images.append(project.imgs.all()[0])
+
     return render(
-        request, "portoflioapp/projects.html", {"latest_projects": latest_projects}
+        request, "portoflioapp/projects.html", {"latest_projects": latest_projects , "project_images":project_images }
     )
 
     
@@ -24,7 +28,7 @@ def details(request, project_id):
     return render(request, "portoflioapp/details.html", {"project": project,"project_skills":project_skills,"project_images":project_images})
     
 def about(request):
-    return HttpResponse("This my About Page , WIP")
+    return render(request , "portoflioapp/about.html")
 
 def contact(request):
-    return HttpResponse("This is my Contact Page , WIP")
+    return render(request , "portoflioapp/contact.html")

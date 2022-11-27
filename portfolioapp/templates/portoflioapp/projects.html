@@ -1,44 +1,27 @@
+{% extends "./navbar.html" %}
+{% block title %} Eddy BESSAH {% endblock %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eddy BESSAH</title>
-    <link rel="stylesheet" href="{% static 'projects.css' %}">
-</head>
-<body>
-    <nav class = "navbar">
-        <ul>
-            <li>
-                <a class = "navlink" href="/">Projects</a>
-            </li>
-            <li>
-                <a class = "navlink" href="/about">About</a>
-            </li>
-            <li>
-                <a class = "navlink" href="/contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
+{% block css %}
+<link rel="stylesheet" href="{% static 'projects.css' %}">
+{% endblock %}
 
-    <div class="projects">    
-        {% for project in latest_projects %}
-        <section>
-            <h1>
+{% block content %}
+<div class="projects">    
+    {% for project in latest_projects %}
+    <section>
+        <div class="container">
+            <img src="{{project.get_thumbnail_img.img.url}}" class="image" alt="{{project.name}}">
+            <div class="middle">
                 <a href="/projects/{{project.id}}">{{project.name}}</a>
-            </h1>
-            <p>
-                {{project.date}}
-            </p>
-            
-        </section>
-       
-        {% endfor %}
-
-    </div>
-     
+               
+        
+            </div>
+        </div>
     
-</body>
-</html>
+    </section>
+   
+    {% endfor %}
+
+</div>
+{% endblock %}
