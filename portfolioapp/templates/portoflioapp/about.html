@@ -2,3 +2,25 @@
 {% block title %}About{% endblock  %}
 
 {% block strong %}<strong>About Me</strong>{% endblock  %}
+{% load static%}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="overview">    
+    <span>
+        <span class="label">Who ? : </span>HI ,I am Eddy  a 20 years old computer science engineer student.<br><br>
+        <span class="label">Status : </span>I am currently in an intership as an Engineer Assistant at Atelier Busch in Chevenez.
+    </span>
+    <span>
+        If you want to learn more about me and my experiences please download my 
+        <span class="label">
+        <a href="{% static 'BESSAH_Eddy_CV.pdf' %}" download="resume" id="resume">resume</a>
+        </span>
+    </span>
+    </div>
+</div>
+{% endblock %}
