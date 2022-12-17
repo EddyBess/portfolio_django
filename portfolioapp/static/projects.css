@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
 .projects{
     display: grid;
     width: 100%;
@@ -8,7 +8,6 @@
     row-gap:40%;
     margin-top: 5%;
     margin-left: 18%;
-    font-family: "Montserrat";
    
 
 
