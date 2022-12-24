@@ -7,21 +7,22 @@
 {% endblock %}
 
 {% block content %}
-<div class="projects">    
-    {% for project in latest_projects %}
-    <section>
-        <div class="container">
-            <img src="{{project.get_thumbnail_img.img.url}}" class="image" alt="{{project.name}}">
-            <div class="middle">
-                <a href="/projects/{{project.id}}">{{project.name}}</a>
-               
-        
-            </div>
-        </div>
-    
-    </section>
-   
-    {% endfor %}
 
+    <div class="projects">    
+        {% for project in latest_projects %}
+        <section>
+            <div class="container">
+                <img src="{{project.get_thumbnail_img.img.url}}" class="image" alt="{{project.name}}">
+                <div class="middle">
+                    <a href="/projects/{{project.id}}" class="projectLink">{{project.name}}</a>
+                </div>
+            </div>
+        
+        </section>
+       
+        {% endfor %}
+    
+    
 </div>
+
 {% endblock %}

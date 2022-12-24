@@ -1,44 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-
-.navbar ul{
-    width: 100%;
+.header{
     display: flex;
+    flex-direction: column;
+    width: fit-content;
     justify-content: space-evenly;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
     list-style-type: none;
     font-family: 'Montserrat';
-    font-size: 25px;
+    font-size: 1.5vw;
+    margin-top: 10px;
+    justify-content: space-evenly;
 
 }
 a{
     text-decoration: none;
     color: black;
-
 }
 .navlink {
     display: inline-block;
     position: relative;
     padding-bottom: 5px;
 }
-  
 .navlink::after {
     content: '';
     position: absolute;
     width: 100%;
-
     transform: scaleX(0);
     height: 2px;
     bottom: 0;
     left: 0;
     background-color: orange;
-
     transition: transform 0.25s ease-out;
   }
   
 .navlink:hover::after {
     transform: scaleX(1);
-  
   }
-
 strong{
     display: block;
     overflow: hidden;
@@ -48,7 +49,7 @@ strong{
     animation: typing 1s  1s forwards steps(20) ,
     blink 1s infinite;
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 1.5vw;
     font-weight: 400;
 }
 @keyframes blink {
@@ -57,7 +58,7 @@ strong{
 }
 @keyframes typing {
     from { width:  0 }
-    to { width: 220px  }
+    to { width:220px }
 
 }
 .center{
@@ -66,3 +67,15 @@ strong{
     justify-content: center;
     flex-direction: row;
 }
+
+@media screen and (max-width:630px) {
+    .navbar{
+        font-size: 4.5vw;
+      
+    }
+    strong{
+        font-size: 3vw;
+    }
+    
+}
+
