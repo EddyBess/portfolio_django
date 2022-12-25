@@ -12,3 +12,13 @@
     height: 500px;
     justify-content: space-evenly;
 }
+
+@media screen and (max-width:630px) {
+    .column{
+        font-size: 3.5vw;
+    }
+    svg{
+        width: 10px;
+        height: 10px;
+    }
+}

@@ -2,19 +2,16 @@
 
 .projects{
     display: grid;
-   
-
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(2, 45%);
     grid-template-rows: repeat(3,25%);
-    row-gap:40%;
     margin-top: 5%;
-  
     font-family: "Montserrat";
-
+    column-gap: 5%;
+    margin-left: 5%;
 }
 .container {
     position: relative;
-    width: 80%;
+    width: 95%;
   }
 
 .image {
@@ -47,12 +44,10 @@
     opacity: 1;
   }
   
-
 .skills{
     display: flex;
     justify-content: space-between;
     width: auto;
-
 }
 .skills img{
     transform: scale(0.1);
@@ -65,6 +60,8 @@
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(1,25%);
         width: 80%;
+        margin-left: 15%;
+        row-gap: 30%;
        
     }
     .middle{
