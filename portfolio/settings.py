@@ -86,7 +86,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         
-        'NAME':'/Volumes/Crucial X6/dev/portfolio_django 2/db.sqlite3'
+        'NAME':'/Volumes/Crucial X6/dev/web/portfolio_django/db.sqlite3'
         
     }
 }

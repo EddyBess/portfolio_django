@@ -5,6 +5,8 @@ from .models import Project
 
 # Create your views here.
 
+def index(request):
+    return render(request,"portoflioapp/index.html")
 
 def projects(request):
 
@@ -32,3 +34,4 @@ def about(request):
 
 def contact(request):
     return render(request , "portoflioapp/contact.html")
+

@@ -15,22 +15,19 @@
 
 <body>
     <div class="header">
-         {% block strong %}
+       
         <strong>
-            Eddy BESSAH
+            <a href="/" class="navlink">⌂ Home Page</a>
         </strong>
-        {% endblock %}
+      
        
        
     </div>
     
     <nav class="navbar">
-       
-        <a class="navlink" href="/">Projects</a>
-    
-        <a class="navlink" href="/about">About</a>
-    
-        <a class="navlink" href="/contact">Contact</a>
+        {%block currentPage%}
+        <a class="navlink" href="/projects">Projects</a>
+        {%endblock%}
     </nav>
    
     {% block content %}{% endblock %}

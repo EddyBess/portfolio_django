@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body{
+    font-family: "Montserrat";
+    margin: 0px;
+    background-image: url("https://multimatics.co.id/images/phyton-programming.jpg");
+    background-size: 100% auto;
+    color: white;
+  
+}
+
+.container{
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    height: 150px;
+    align-items: space-between;
+    
+}
+.navbar {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    font-family: 'Montserrat';
+    font-size: 1.5vw;
+    margin-top: 10px;
+    justify-content: space-evenly;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+.navlink {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+.navlink::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+    transition: transform 0.25s ease-out;
+  }
+  
+.navlink:hover::after {
+    transform: scaleX(1);
+  }
